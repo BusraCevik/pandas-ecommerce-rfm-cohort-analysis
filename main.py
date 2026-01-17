@@ -1,7 +1,7 @@
 import os
 from src.data_preparation import prepare_data
 from src.feature_engineering import build_customer_features
-
+from src.rfm_analysis import run_rfm_analysis
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -22,7 +22,7 @@ def main():
 
     prepare_data(RAW_DATA_PATH, CLEAN_DATA_PATH)
     build_customer_features(CLEAN_DATA_PATH, FEATURED_DATA_PATH)
-
+    run_rfm_analysis(FEATURED_DATA_PATH, TABLES_PATH)
 
 if __name__ == '__main__':
     main()
