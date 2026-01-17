@@ -1,5 +1,7 @@
 import os
 from src.data_preparation import prepare_data
+from src.feature_engineering import build_customer_features
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -17,7 +19,9 @@ DASHBOARD_HTML_PATH = os.path.join(DOCS_DIR, 'dashboard.html')
 
 
 def main():
+
     prepare_data(RAW_DATA_PATH, CLEAN_DATA_PATH)
+    build_customer_features(CLEAN_DATA_PATH, FEATURED_DATA_PATH)
 
 
 if __name__ == '__main__':
