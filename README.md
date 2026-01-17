@@ -3,7 +3,7 @@
 A **Pandas-based e-commerce customer analytics and segmentation** project.  
 The project follows a **layered data pipeline architecture**, separating raw data cleaning, feature engineering, customer segmentation, cohort analysis, and visual storytelling.
 
-The primary goal is to analyze **customer purchasing behavior, retention dynamics, and revenue contribution** using interpretable statistical methods rather than predictive modeling.
+This project answers how customer value, retention dynamics, and purchasing behavior evolve over time in an e-commerce business using structured data analytics and interpretable metrics.
 
 ---
 
@@ -93,7 +93,7 @@ pandas-ecommerce-rfm-cohort-analysis/
 │   └── featured/           # Customer-level and cohort features
 │
 ├── outputs/
-│   ├── csv/                # Aggregated analytical tables
+│   ├── tables/                # Aggregated analytical tables
 │   └── figures/            # Static visualizations
 │
 ├── docs/
@@ -101,10 +101,11 @@ pandas-ecommerce-rfm-cohort-analysis/
 │   └── demo.gif            # Preview
 │
 ├── src/
-│   ├── data_cleaning.py
+│   ├── data_preparation.py
 │   ├── feature_engineering.py
 │   ├── rfm_analysis.py
 │   ├── cohort_analysis.py
+│   ├── dashboard.py
 │   └── visualization.py
 │
 ├── main.py                 # End-to-end pipeline execution
