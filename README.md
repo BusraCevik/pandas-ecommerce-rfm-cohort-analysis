@@ -72,13 +72,13 @@ The project provides:
 ![](outputs/png/average_basket_value_trend.png)
 
 ---
+### 🌐 Interactive Dashboard
 
 - Interactive Dashboard Demo
 ![](docs/demo.gif)
 
 
-### 🌐 Interactive Dashboard
-🖱️ <a href="https://busracevik.github.io/pandas-global-ecommerce-rfm-cohort-analysis/index.html" target="_blank">View Interactive Dashboard</a>
+- 🖱️ <a href="https://busracevik.github.io/pandas-global-ecommerce-rfm-cohort-analysis/index.html" target="_blank">View Interactive Dashboard</a>
 
 ---
 
