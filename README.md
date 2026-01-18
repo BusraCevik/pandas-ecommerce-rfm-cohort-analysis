@@ -82,6 +82,17 @@ The project provides:
 
 ---
 
+## 🔍 Key Insight: Absence of Champion Segment
+
+
+No customers were classified as *Champions* under the defined RFM thresholds.
+
+This indicates a highly skewed customer distribution dominated by low-frequency and one-time buyers, which is common in transactional retail datasets.  
+The result reflects underlying customer behavior rather than a modeling limitation.
+
+
+---
+
 ## 📁 Project Structure
 
 ```text
