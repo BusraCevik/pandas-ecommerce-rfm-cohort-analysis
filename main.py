@@ -3,7 +3,10 @@ from src.data_preparation import prepare_data
 from src.feature_engineering import build_customer_features
 from src.rfm_analysis import run_rfm_analysis
 from src.cohort_analysis import run_cohort_analysis
+from src.monthly_metrics import build_monthly_metrics
 from src.visualization import generate_visualizations
+from src.dashboard import build_rfm_dashboard
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -17,7 +20,7 @@ FEATURED_DATA_PATH = os.path.join(DATA_DIR, 'featured', 'featured.csv')
 
 TABLES_PATH = os.path.join(OUTPUT_DIR, 'tables')
 FIGURES_PATH = os.path.join(OUTPUT_DIR, 'figures')
-DASHBOARD_HTML_PATH = os.path.join(DOCS_DIR, 'dashboard.html')
+DASHBOARD_HTML_PATH = os.path.join(DOCS_DIR, 'index.html')
 
 
 def main():
@@ -26,7 +29,9 @@ def main():
     build_customer_features(CLEAN_DATA_PATH, FEATURED_DATA_PATH)
     run_rfm_analysis(FEATURED_DATA_PATH, TABLES_PATH)
     run_cohort_analysis(CLEAN_DATA_PATH, TABLES_PATH)
+    build_monthly_metrics(CLEAN_DATA_PATH, TABLES_PATH)
     generate_visualizations(TABLES_PATH, FIGURES_PATH)
+    build_rfm_dashboard(TABLES_PATH,DASHBOARD_HTML_PATH)
 
 if __name__ == '__main__':
     main()
