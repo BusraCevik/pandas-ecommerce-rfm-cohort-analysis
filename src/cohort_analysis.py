@@ -65,7 +65,7 @@ def run_cohort_analysis(input_path, output_path):
         os.path.join(output_path, "cohort_matrix.csv")
     )
 
-    # Debug sample for validation
+
     print("Sample cohort mapping:")
     print(
         df[["customer_id", "invoice_month", "cohort_month", "cohort_index"]]
