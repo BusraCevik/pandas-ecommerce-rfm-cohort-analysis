@@ -74,8 +74,8 @@ The project provides:
 - Interactive Dashboard Demo
 ![](docs/demo.gif)
 
-
-- 🖱️ <a href="https://busracevik.github.io/pandas-global-ecommerce-rfm-cohort-analysis/index.html" target="_blank">View Interactive Dashboard</a>
+🖱️ **Live Dashboard:**  
+<a href="https://busracevik.github.io/pandas-ecommerce-rfm-cohort-analysis/index.html" target="_blank">View Interactive Dashboard</a>
 
 ---
 
