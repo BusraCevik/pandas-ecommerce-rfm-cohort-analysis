@@ -73,7 +73,7 @@ def run_cohort_analysis(input_path, output_path):
     )
 
 
-    #Retention(t) = ActiveCustomers(t) / ActiveCustomers(1)
+
 
     retention_matrix_df = cohort_matrix_df.divide(
         cohort_matrix_df.iloc[:, 0],
