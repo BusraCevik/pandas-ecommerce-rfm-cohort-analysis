@@ -48,28 +48,25 @@ The project provides:
 
 ### 🧮 Customer Segmentation
 - RFM score distribution  
-![](outputs/png/rfm_score_distribution.png)
+![](outputs/figures/rfm_score_distribution.png)
 
 - Revenue contribution by RFM segment  
-![](outputs/png/revenue_by_rfm_segment.png)
+![](outputs/figures/revenue_by_segment.png)
 
 ---
 
 ### 📆 Cohort Analysis
 - Monthly customer retention heatmap  
-![](outputs/png/cohort_retention_heatmap.png)
-
-- Average retention curve  
-![](outputs/png/average_retention_curve.png)
+![](outputs/figures/cohort_retention_heatmap.png)
 
 ---
 
 ### 💰 Sales & Behavioral Insights
 - Monthly revenue trend  
-![](outputs/png/monthly_revenue_trend.png)
+![](outputs/figures/monthly_revenue_trend.png)
 
-- Average basket value over time  
-![](outputs/png/average_basket_value_trend.png)
+- Monthly Order Trend
+![](outputs/figures/monthly_order_trend.png)
 
 ---
 ### 🌐 Interactive Dashboard
@@ -85,11 +82,12 @@ The project provides:
 ## 🔍 Key Insight: Absence of Champion Segment
 
 
-No customers were classified as *Champions* under the defined RFM thresholds.
+Under the current RFM thresholds, no customers were classified as Champions.
 
-This indicates a highly skewed customer distribution dominated by low-frequency and one-time buyers, which is common in transactional retail datasets.  
-The result reflects underlying customer behavior rather than a modeling limitation.
+This suggests that the customer base is mainly driven by low-frequency and one-time buyers, which is quite common in transactional retail datasets.
+Rather than being a modeling issue, this result reflects the natural purchasing behavior observed in the data.
 
+If stricter or looser thresholds are applied, champion-like segments may emerge but the current setup intentionally highlights realistic customer distribution.
 
 ---
 
@@ -116,6 +114,7 @@ pandas-ecommerce-rfm-cohort-analysis/
 │   ├── feature_engineering.py
 │   ├── rfm_analysis.py
 │   ├── cohort_analysis.py
+│   ├── monthly_metrics.py
 │   ├── dashboard.py
 │   └── visualization.py
 │
