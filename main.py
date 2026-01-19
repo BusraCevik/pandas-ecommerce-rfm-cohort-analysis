@@ -3,6 +3,7 @@ from src.data_preparation import prepare_data
 from src.feature_engineering import build_customer_features
 from src.rfm_analysis import run_rfm_analysis
 from src.cohort_analysis import run_cohort_analysis
+from src.visualization import generate_visualizations
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -25,6 +26,7 @@ def main():
     build_customer_features(CLEAN_DATA_PATH, FEATURED_DATA_PATH)
     run_rfm_analysis(FEATURED_DATA_PATH, TABLES_PATH)
     run_cohort_analysis(CLEAN_DATA_PATH, TABLES_PATH)
+    generate_visualizations(TABLES_PATH, FIGURES_PATH)
 
 if __name__ == '__main__':
     main()

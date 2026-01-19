@@ -71,3 +71,18 @@ def run_cohort_analysis(input_path, output_path):
         df[["customer_id", "invoice_month", "cohort_month", "cohort_index"]]
         .head(10)
     )
+
+
+    #Retention(t) = ActiveCustomers(t) / ActiveCustomers(1)
+
+    retention_matrix_df = cohort_matrix_df.divide(
+        cohort_matrix_df.iloc[:, 0],
+        axis=0
+    )
+
+    print("Retention matrix preview:")
+    print(retention_matrix_df.head())
+
+    retention_matrix_df.to_csv(
+        os.path.join(output_path, "retention_matrix.csv")
+    )
